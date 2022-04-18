@@ -4,7 +4,7 @@
 #include "roster.h"
 #include "student.h"
 #include "degree.h"
-
+// TODO: UW = Namespace vs <string>? I have seen string used in other projects
 using namespace std;
 
 int main() {

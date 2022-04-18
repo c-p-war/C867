@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
+// TODO: UW - This differs from a constructor because it sets values?
 // Initialize blank record
 Student::Student() {
     this->studentId = "";
@@ -19,6 +20,7 @@ Student::Student() {
 }
 
 // D.2 Constructor
+// TODO: UW - Importance of constructors?
 Student::Student(
     string studentId,
     string firstName, 
@@ -28,6 +30,7 @@ Student::Student(
     int daysInCourse[], 
     DegreeProgram degree
     ) {
+        // TODO: UW - Could I use the setters instead?
         this->studentId = studentId;
         this->firstName = firstName;
         this->lastName = lastName;

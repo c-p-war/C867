@@ -9,15 +9,18 @@ using namespace std;
 class Roster {
     public:
     Roster();
+		// TODO: UW - Destructure? What is this called? Is this related to memory cleanup?
     ~Roster();
     /* E.1 
     Create an array of pointers, classRosterArray, to hold the data provided in the “studentData Table.” 
     */
+		// TODO: UW - An array of value that point to a spot in memory? 
     Student* classRosterArray[5] = { nullptr, nullptr, nullptr, nullptr, nullptr };
 
     /*E.3.A 
     Sets the instance variables from part D1 and updates the roster 
     */ 
+	 // TODO: UW - Void because it is not returning a specific type, but operating on data? 
     void add(
         string studentID, 
         string firstName, 
