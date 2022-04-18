@@ -56,10 +56,10 @@ Tasks may not be submitted as cloud links, such as links to Google Docs, Google 
 
 
 
-<h3><b>A.  Modify the “studentData Table” to include your personal information as the last item.</b></h3>
+### **A.  Modify the “studentData Table” to include your personal information as the last item.**
  
 
-<h3><b>B.  Create a C++ project in your integrated development environment (IDE) with the following files:</b></h3>
+### **B.  Create a C++ project in your integrated development environment (IDE) with the following files:**
 
 -  degree.h
 
@@ -73,13 +73,13 @@ Tasks may not be submitted as cloud links, such as links to Google Docs, Google 
 Note: There must be a total of six source code files.
  
 
-<h3><b>C.  Define an enumerated data type DegreeProgram for the degree programs containing the data type values SECURITY, NETWORK, and SOFTWARE.</b></h3>
+### **C.  Define an enumerated data type DegreeProgram for the degree programs containing the data type values SECURITY, NETWORK, and SOFTWARE.**
  
 
 Note: This information should be included in the degree.h file.
  
 
-<h3><b>D.  For the Student class, do the following:</b></h3>
+### **D.  For the Student class, do the following:**
 
 1.  Create the class Student  in the files student.h and student.cpp, which includes each of the following variables:
 
@@ -110,7 +110,7 @@ Note: This information should be included in the degree.h file.
 -  print() to print specific student data
  
 
-<h3><b>E.  Create a Roster class (roster.cpp) by doing the following:</b></h3>
+### **E.  Create a Roster class (roster.cpp) by doing the following:**
 
 1.  Create an array of pointers, classRosterArray, to hold the data provided in the “studentData Table.”
 
@@ -139,7 +139,7 @@ Note: A valid email should include an at sign ('@') and period ('.') and should 
 -  public void printByDegreeProgram(DegreeProgram degreeProgram) that prints out student information for a degree program specified by an enumerated type.
  
 
-<h3><b>F.  Demonstrate the program’s required functionality by adding a main() function in main.cpp, which will contain the required function calls to achieve the following results:</b></h3>
+### **F.  Demonstrate the program’s required functionality by adding a main() function in main.cpp, which will contain the required function calls to achieve the following results:**
 
 1.  Print out to the screen, via your application, the course title, the programming language used, your WGU student ID, and your name.
 
@@ -177,5 +177,23 @@ classRoster.remove("A3");
 
 5.  Implement the destructor to release the memory that was allocated dynamically in Roster.
  
+### **G.  Demonstrate professional communication in the content and presentation of your submission.**
 
-<h3><b>G.  Demonstrate professional communication in the content and presentation of your submission.</b></h3>
+
+
+# Learning Objectives (Competencies)
+
+1. Pointers and memory
+- The graduate applies pointers to solve complex problems.
+2. Control Structures
+- The graduate writes code that implements decision and loop constructs to control the flow of a program.
+3. Variables and Data Types
+- The graduate prepares code which declares, initializes, and assigns values to variables of appropriate types as part of the application development process.
+4. Object-oriented Paradigm
+- The graduate applies object-oriented programming concepts in order to create a basic application.
+5. Arrays
+- The graduate creates arrays in order to solve complex problems.
+6. Functions
+- The graduate writes code that creates and manipulates functions and files.
+7. Introduction to Programming
+- The graduate applies fundamental programming concepts in a specific programming environment.
