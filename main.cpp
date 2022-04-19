@@ -4,14 +4,13 @@
 #include "roster.h"
 #include "student.h"
 #include "degree.h"
-// TODO: UW = Namespace vs <string>? I have seen string used in other projects
 using namespace std;
 
 int main() {
 
 const string acceptanceCriteriaF1 = " Course Title: C867 - Scripting and Programming Applications\n Programming Language: C++\n Student ID: #001501829\n Name: Caleb Wardlaw";
 
-std::cout<< acceptanceCriteriaF1;
+cout<< acceptanceCriteriaF1;
 
 // A.0 Modify the “studentData Table” to include your personal information as the last item.
 const string studentData[] = 
@@ -22,14 +21,6 @@ const string studentData[] =
         "A4, Erin, Black, Erin.black@comcast.net, 22, 50, 58, 40, SECURITY",
         "A5, Caleb, Wardlaw, cwardl4@wgu.edu, 22, 32, 42, 44, 58, SOFTWARE"
     };
-
-    // Array named arr, with 10 position, each position has an integer, the start is a pointer, each position points to an array
-    int *arr[10];
-    // MUST ALWAYS INITIALIZE ARRAY POSITIONS AS NULL FIRST
-
-    for(int i=0; i<0; i++){
-        arr[i] = new int();
-    }
 
 	// Roster classRoster;
 	

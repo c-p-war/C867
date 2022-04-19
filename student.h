@@ -1,27 +1,23 @@
 // B.0.2 Create student.h
+// Helps compile correctly, defines the beginning and the end of the definition file
 #ifndef student_h
 #define student_h
 #include "degree.h"
-#include <stdio.h>
 #include <string>
-using namespace std;
 
 class Student {
     public:
-        Student();
         // D.2.D Constructor
-        Student(
-            string studentId,
-            string firstName, 
-            string lastName, 
-            string emailAddress, 
-            int age, 
-            int days[], 
-            // TODO: Define enumerated type 
-            DegreeProgram degree
-        );       
+        // Define the parameters for the constructor
+        Student(string studentId, string firstName, string lastName,
+            string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degree);
 
-        ~Student();
+        // Constructor is called to instantiate an object, an object is an instantiation of a class
+        // Think of a constructor like a variable, for a variable you delcare a data type, for a constructor
+        // you declare a class.
+        // learncpp.com 
+
+        // This is the constructor because it has the same name as the class
 
         // D.2.B Getter / Mutator
         string getStudentId();
@@ -38,15 +34,12 @@ class Student {
         void setLastName(string lastName);
         void setEmail(string emailAddress);
         void setAge(int age);
-        void setDays(int daysToSet[]);
+        void setDays(int daysInCourse1, int daysInCourse2, int daysInCourse3);
         void setDegree(DegreeProgram degree);
 
 
         // // D.2.E print() to print specific student data
-        void print(); 
-        // TODO: Rename consts
-        const static int MAX_COURSES = 3;
-
+        void print();
 
     // D.1 Create the class Student  in the files student.h and student.cpp, which includes each of the following variables
     private:
@@ -55,9 +48,7 @@ class Student {
         string lastName;
         string emailAddress;
         int age;
-        // int* days;
-        // TODO: Refactor hard coding
-        int daysInCourse[MAX_COURSES];
+        int* days;
         DegreeProgram degree;
 
 };

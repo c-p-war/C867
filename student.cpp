@@ -4,52 +4,21 @@
 #include <iostream>
 #include <string>
 using namespace std;
-// TODO: UW - This differs from a constructor because it sets values?
-// Initialize blank record
-Student::Student() {
-    this->studentId = "";
-    this->firstName = "";
-    this->lastName = "";
-    this->emailAddress = "";
-    this->age = 0;
-    for (int i = 0; i < MAX_COURSES; ++i) {
-        this->daysInCourse[i] = 0;
-    }
-    // TODO: Verify this will be blank
-    this->degree = degree;
-}
 
 // D.2 Constructor
-// TODO: UW - Importance of constructors?
-Student::Student(
-    string studentId,
-    string firstName, 
-    string lastName, 
-    string emailAddress, 
-    int age,
-    int daysInCourse[], 
-    DegreeProgram degree
-    ) {
-        // TODO: UW - Could I use the setters instead?
-        this->studentId = studentId;
-        this->firstName = firstName;
-        this->lastName = lastName;
-        this->emailAddress = emailAddress;
-        this->age = age;
-        for (int i = 0; i < MAX_COURSES; ++i) {
-            this->daysInCourse[i] = daysInCourse[i];
-        }
-        this->degree = degree;
-    // setId(studentId);
-    // setFirstName(firstName);
-    // setLastName(lastName);
-    // setEmail(emailAddress);
-    // setAge(age);
-    // setDays(days);
-    // setDegree(degree);
+Student::Student(string studentId, string firstName, string lastName,
+    string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degree) {
+    this->studentId = studentId;
+    this->firstName = firstName;
+    this->lastName = lastName;
+    this->emailAddress = emailAddress;
+    this->age = age;
+    this->days = new int[3];
+    this->days[0] = daysInCourse1;
+    this->days[1] = daysInCourse2;
+    this->days[2] = daysInCourse3;
+    this->degree = degree;
 }
-
-Student::~Student(){}
 
 // D.2 Mutator / Setters
 void Student::setId(string studentId){
@@ -71,11 +40,12 @@ void Student::setEmail(string emailAddress){
 void Student::setAge(int age) {
     this -> age = age;
 }
-// TODO: Finish setDays
-void Student::setDays(int daysToSet[]) {
-    for(int i=0; i < MAX_COURSES; ++i){
-        this -> daysInCourse[i] = daysToSet[i];
-    }
+
+void Student::setDays(int daysInCourse1, int daysInCourse2, int daysInCourse3) {
+    this->days = new int[3];
+    this->days[0] = daysInCourse1;
+    this->days[1] = daysInCourse2;
+    this->days[2] = daysInCourse3;
 }
 
 void Student::setDegree(DegreeProgram degree){
@@ -102,10 +72,9 @@ string Student::getEmail() {
 int Student::getAge() {
     return age;
 }
-// TODO: Finish getDays
 
 int* Student::getDays() {
-    return daysInCourse;
+    return days;
 }
 
 DegreeProgram Student::getDegree() {
