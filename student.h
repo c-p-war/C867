@@ -4,6 +4,8 @@
 #define student_h
 #include "degree.h"
 #include <string>
+using namespace std;
+
 
 class Student {
     public:
@@ -11,6 +13,9 @@ class Student {
         // Define the parameters for the constructor
         Student(string studentId, string firstName, string lastName,
             string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degree);
+
+        Student(string studentId, string firstName, string lastName,
+            string emailAddress, int age, int* daysArray, DegreeProgram degree);
 
         // Constructor is called to instantiate an object, an object is an instantiation of a class
         // Think of a constructor like a variable, for a variable you delcare a data type, for a constructor

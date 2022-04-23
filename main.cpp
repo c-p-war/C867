@@ -1,6 +1,7 @@
 // B.0.4 Create main.cpp
 #include <iostream>
 #include <iomanip>
+#include <sstream>
 #include "roster.h"
 #include "student.h"
 #include "degree.h"
@@ -8,6 +9,7 @@ using namespace std;
 
 int main() {
 
+const int static ROSTER_LENGTH = 5;
 const string acceptanceCriteriaF1 = " Course Title: C867 - Scripting and Programming Applications\n Programming Language: C++\n Student ID: #001501829\n Name: Caleb Wardlaw";
 
 cout<< acceptanceCriteriaF1;
@@ -22,6 +24,45 @@ const string studentData[] =
         "A5, Caleb, Wardlaw, cwardl4@wgu.edu, 22, 32, 42, 44, 58, SOFTWARE"
     };
 
+DegreeProgram degreeProgram;
+Roster classRoster;
+
+for (int i = 0; i < sizeof(studentData) / sizeof(studentData[i]); i++){
+		string input = studentData[i];
+		istringstream ss(input);
+		string token;
+		string rAddDat[9];
+	
+		int j = 0;
+		while (getline(ss, token, ',')) {
+			rAddDat[j] = token;
+			j += 1;
+		}
+	
+		if (rAddDat[8] == "SECURITY") {
+			degreeProgram = SECURITY;
+		}
+		else if (rAddDat[8] == "NETWORK") {
+			degreeProgram = NETWORK;
+		}
+		else if (rAddDat[8] == "SOFTWARE") {
+			degreeProgram = SOFTWARE;
+		}
+		cout << "Calling add for " << rAddDat[0] << ", ";
+		classRoster.add(rAddDat[0],
+			rAddDat[1],
+			rAddDat[2],
+			rAddDat[3],
+			std::stoi(rAddDat[4]),
+			std::stoi(rAddDat[5]),
+			std::stoi(rAddDat[6]),
+			std::stoi(rAddDat[7]),
+			degreeProgram);
+	}
+	cout << endl;
+
+	cout << endl << "Calling printAll():" << endl;
+	classRoster.printAll();
 	// Roster classRoster;
 	
 	// for (int i = 0; i < NUM_STUDENTS; ++i) {

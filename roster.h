@@ -4,17 +4,20 @@
 #include "student.h"
 #include <stdio.h>
 #include <string>
-#include <vector>
+using namespace std;
+
+// static const unsigned int STUDENT_COUNT = 5;
 
 class Roster {
     public:
 			Roster();
+			~Roster();
 			/*E.3.A 
 			Sets the instance variables from part D1 and updates the roster 
 			*/ 
-
+			// Student* classRosterArray[STUDENT_COUNT] = {nullptr, nullptr, nullptr, nullptr, nullptr};
 			void add(
-					string studentID, 
+					string studentId, 
 					string firstName, 
 					string lastName, 
 					string emailAddress, 
@@ -40,7 +43,7 @@ class Roster {
 			void printAll();
 
 			/* E.3.D 
-			Correctly prints a student’s average number of days in the three courses. The student is identified by the studentID parameter 
+			Correctly prints a student’s average number of days in the three courses. The student is identified by the studentId parameter 
 			*/
 			void printAverageDaysInCourse(string StudentId);
 
@@ -57,8 +60,9 @@ class Roster {
 		    void printByDegreeProgram(DegreeProgram degree);
 
     private:
-
-			vector<Student*> classRosterArray;
+			const static int COURSE_COUNT = 3;
+			const static int ROSTER_LENGTH = 5;
+			Student* classRosterArray[5] = { nullptr, nullptr, nullptr, nullptr, nullptr };
 };
 
 #endif /* roster_h */

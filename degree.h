@@ -3,7 +3,6 @@
 #define degree_h
 
 /* C.0 Define an enumerated data type DegreeProgram for the degree programs containing the data type values SECURITY, NETWORK, and SOFTWARE */
-// TODO: Is a user defined type
 enum DegreeProgram {
     SECURITY,
     NETWORK,
