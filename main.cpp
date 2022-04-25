@@ -25,44 +25,54 @@ const string studentData[] =
     };
 
 DegreeProgram degreeProgram;
+// TODO: UW = ln 29 is throwing
+/* 
+Undefined symbols for architecture x86_64:
+  "Roster::Roster()", referenced from:
+      _main in main-952ead.o
+  "Roster::~Roster()", referenced from:
+      _main in main-952ead.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+*/
 Roster classRoster;
 
-for (int i = 0; i < sizeof(studentData) / sizeof(studentData[i]); i++){
-		string input = studentData[i];
-		istringstream ss(input);
-		string token;
-		string rAddDat[9];
+// for (int i = 0; i < sizeof(studentData) / sizeof(studentData[i]); i++){
+// 		string input = studentData[i];
+// 		istringstream ss(input);
+// 		string token;
+// 		string rAddDat[9];
 	
-		int j = 0;
-		while (getline(ss, token, ',')) {
-			rAddDat[j] = token;
-			j += 1;
-		}
+// 		int j = 0;
+// 		while (getline(ss, token, ',')) {
+// 			rAddDat[j] = token;
+// 			j += 1;
+// 		}
 	
-		if (rAddDat[8] == "SECURITY") {
-			degreeProgram = SECURITY;
-		}
-		else if (rAddDat[8] == "NETWORK") {
-			degreeProgram = NETWORK;
-		}
-		else if (rAddDat[8] == "SOFTWARE") {
-			degreeProgram = SOFTWARE;
-		}
-		cout << "Calling add for " << rAddDat[0] << ", ";
-		classRoster.add(rAddDat[0],
-			rAddDat[1],
-			rAddDat[2],
-			rAddDat[3],
-			std::stoi(rAddDat[4]),
-			std::stoi(rAddDat[5]),
-			std::stoi(rAddDat[6]),
-			std::stoi(rAddDat[7]),
-			degreeProgram);
-	}
-	cout << endl;
+// 		if (rAddDat[8] == "SECURITY") {
+// 			degreeProgram = SECURITY;
+// 		}
+// 		else if (rAddDat[8] == "NETWORK") {
+// 			degreeProgram = NETWORK;
+// 		}
+// 		else if (rAddDat[8] == "SOFTWARE") {
+// 			degreeProgram = SOFTWARE;
+// 		}
+// 		cout << "Calling add for " << rAddDat[0] << ", ";
+// 		classRoster.add(rAddDat[0],
+// 			rAddDat[1],
+// 			rAddDat[2],
+// 			rAddDat[3],
+// 			std::stoi(rAddDat[4]),
+// 			std::stoi(rAddDat[5]),
+// 			std::stoi(rAddDat[6]),
+// 			std::stoi(rAddDat[7]),
+// 			degreeProgram);
+// 	}
+// 	cout << endl;
 
-	cout << endl << "Calling printAll():" << endl;
-	classRoster.printAll();
+// 	cout << endl << "Calling printAll():" << endl;
+// 	classRoster.printAll();
 	// Roster classRoster;
 	
 	// for (int i = 0; i < NUM_STUDENTS; ++i) {
